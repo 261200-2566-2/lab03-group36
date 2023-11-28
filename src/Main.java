@@ -1,17 +1,17 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+/* Note: ตอนจะใส่อาวุธอย่าอัพLevelอาวุธก่อนใส่นะครับ ให้อัพเลเวลก่อนแล้วค่อยใส่ ไม่งั้นจะติดบัค:( */
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        RPGCharacter player1 = new RPGCharacter("AuMaster");
+        Sword sw1 = new Sword("MasterPieceSword",100);
+        Shield sh1 = new Shield("PainkillerShield",40);
+        player1.levelUp();
+        player1.displayStats();
+        player1.equip(sw1);
+        player1.displayStats();
+        player1.takeDamage(sw1,sh1);
+        player1.displayStats();
+        player1.levelUp();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
     }
 }
